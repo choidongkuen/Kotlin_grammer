@@ -9,4 +9,5 @@
 
 ### 📚 책 정보
 
-- 책 정보 : 
+![image](https://user-images.githubusercontent.com/96874318/232603191-235910ec-5f2d-4003-b4f8-aa614cfd5600.png)
+
