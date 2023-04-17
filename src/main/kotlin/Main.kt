@@ -1,7 +1,9 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    val developer = Developer("최동근",true,"Kotlin")
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    val marketer = Marketer("김지후",false, Division.DIGITAL)
+
+    println("developer's special skill is :  ${getSpecialSkill(developer)}")
+    println("marketer's special skill is : ${getSpecialSkill(marketer)}")
+
 }

@@ -17,5 +17,23 @@ val dogs = listOf(
 fun main() {
     println(dogs.maxByOrNull { it -> it.age })
     println(dogs.minByOrNull { dog: Dog -> dog.age })
-}
 
+    println(dogs.filter { it -> it.gender == Gender.FEMALE }
+        .map { "${it.name} 강이지는 ${it.age} 살 입니다." })
+
+    // group by
+    println(dogs.groupBy { it.gender }) // MALE = [], FEMALE = []
+
+    // flatMap
+    val strings = listOf("abc", "def")
+    println(strings.map { it.toList() }) // 2중 리스트
+    println(strings.map { it.toList() }.flatten())
+
+    // sequence
+    println(dogs.asSequence()
+        .map {
+            println(it)
+            it.name
+        }.find { it.startsWith("d") })
+
+}
