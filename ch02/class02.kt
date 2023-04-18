@@ -12,12 +12,21 @@ class Test07 {
         private set // block setter
 
     var age: Int = 0
-        set(age) {
-            field + 1
-        }
-
 }
 
+class Test08(paramName: String) { // 생성자 인자에 val/var 없다면 프로퍼티 선언과 초기화는 개발자 몫
+
+    val name: String
+
+    init {
+        if (paramName.isEmpty()) {
+            throw IllegalArgumentException("잘못된 파라미터 값입니다.")
+        }
+
+        name = paramName
+    }
+
+}
 
 fun main() {
     val test06 = Test06()
@@ -26,4 +35,6 @@ fun main() {
 
     test06.age = 20 // setter
     println(test06.age)
+
+    val test08 = Test08("이름")
 }
