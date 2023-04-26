@@ -60,4 +60,5 @@ val list = listOf(1, 2, 3, 4)
 
 var newList = list - 1
 print(newList) // 1 원소 삭제된 새로운 리스트 출력
+
 ```
