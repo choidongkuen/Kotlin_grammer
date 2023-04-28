@@ -22,7 +22,7 @@ class Prac04 {
 
 
     fun for04() {
-        for (i in 0..elements.size - 1) {
+        for (i in 0..elements.size) {
             println(elements[i])
         }
     }
